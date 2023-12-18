@@ -1,4 +1,4 @@
-package tp4;
+package tp4.entities;
 
 import javax.persistence.*;
 import java.time.LocalDate;

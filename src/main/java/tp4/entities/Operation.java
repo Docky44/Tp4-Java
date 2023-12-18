@@ -1,8 +1,7 @@
-package tp4;
+package tp4.entities;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.Set;
 
 @Entity
 @Table(name = "operation")
