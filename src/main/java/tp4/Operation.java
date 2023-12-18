@@ -1,7 +1,8 @@
-package fr.epsi.b32324c2.tp4;
+package tp4;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Table(name = "operation")
@@ -56,7 +57,7 @@ public class Operation {
         this.compte = compte;
     }
 
-    @ManyToOne (cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "id_compte")
     private Compte compte;
 

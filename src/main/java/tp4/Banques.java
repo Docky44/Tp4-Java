@@ -1,4 +1,4 @@
-package fr.epsi.b32324c2.tp4;
+package tp4;
 
 import javax.persistence.*;
 import java.util.Set;

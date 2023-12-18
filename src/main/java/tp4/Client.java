@@ -1,6 +1,4 @@
-package fr.epsi.b32324c2.tp4;
-
-import fr.epsi.b32324c2.entities.Emprunt;
+package tp4;
 
 import javax.persistence.*;
 import java.time.LocalDate;

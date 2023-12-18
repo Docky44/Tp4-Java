@@ -30,7 +30,7 @@ public class Emprunt {
 
     @ManyToOne
     @JoinColumn(name = "id_client")
-    Client client;
+    Clients client;
 
     public int getId() {
         return id;

@@ -5,7 +5,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "client")
-public class Client {
+public class Clients {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

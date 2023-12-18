@@ -1,12 +1,9 @@
-package fr.epsi.b32324c2.tp4;
+package tp4;
 
 import javax.persistence.*;
 
 @Embeddable
 public class Adresse {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
 
     private int numero;
 
@@ -15,14 +12,6 @@ public class Adresse {
     private int codePostal;
 
     private String ville;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public int getNumero() {
         return numero;
@@ -59,7 +48,6 @@ public class Adresse {
     @Override
     public String toString() {
         return "Adresse{" +
-                "id=" + id +
                 ", numero='" + numero + '\'' +
                 ", rue='" + rue + '\'' +
                 ", codePostal='" + codePostal + '\'' +
