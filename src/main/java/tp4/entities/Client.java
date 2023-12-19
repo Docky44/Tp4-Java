@@ -65,6 +65,7 @@ public class Client {
         this.adresse = adresse;
     }
 
+
     @ManyToOne
     @JoinColumn(name = "id_banque")
     private Banques banque;
@@ -76,16 +77,17 @@ public class Client {
     )
     private Set<Compte> comptes;
 
-    @Embedded private Adresse adresse;
-
-
-    @Override
-    public String toString() {
-        return "Client{" +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
-                ", prenom='" + prenom + '\'' +
-                ", dateNaissance=" + dateNaissance +
-                '}';
+    public Client(String nom, String prenom, LocalDate dateNaissance, Adresse adresse, Banques banques) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.dateNaissance = dateNaissance;
+        this.adresse = adresse;
+        this.banque = banques;
     }
+
+    public Client() {
+
+    }
+
+    @Embedded private Adresse adresse;
 }

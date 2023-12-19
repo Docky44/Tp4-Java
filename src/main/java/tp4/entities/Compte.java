@@ -51,12 +51,13 @@ public class Compte {
     @OneToMany(mappedBy = "compte")
     private Set<Operation> operations;
 
-    @Override
-    public String toString() {
-        return "Compte{" +
-                "id=" + id +
-                ", solde=" + solde +
-                ", numero='" + numero + '\'' +
-                '}';
+    public Compte(String numero, Double solde, Set<Client> client) {
+        this.numero = numero;
+        this.solde = solde;
+        this.client = client;
+    }
+
+    public Compte() {
+
     }
 }

@@ -16,6 +16,10 @@ public class Operation {
 
     private String motif;
 
+    public Operation() {
+
+    }
+
     public int getId() {
         return id;
     }
@@ -32,11 +36,11 @@ public class Operation {
         this.date = date;
     }
 
-    public double getMontant() {
+    public Double getMontant() {
         return montant;
     }
 
-    public void setMontant(double montant) {
+    public void setMontant(Double montant) {
         this.montant = montant;
     }
 
@@ -48,26 +52,14 @@ public class Operation {
         this.motif = motif;
     }
 
-    public Compte getCompte() {
-        return compte;
-    }
-
-    public void setCompte(Compte compte) {
-        this.compte = compte;
-    }
-
     @ManyToOne
     @JoinColumn(name = "id_compte")
     private Compte compte;
 
-    @Override
-    public String toString() {
-        return "Operation{" +
-                "id=" + id +
-                ", date=" + date +
-                ", montant=" + montant +
-                ", motif='" + motif + '\'' +
-                ", compte=" + compte +
-                '}';
+    public Operation(LocalDateTime date, Double montant, String motif, Compte compte) {
+        this.date = date;
+        this.montant = montant;
+        this.motif = motif;
+        this.compte = compte;
     }
 }

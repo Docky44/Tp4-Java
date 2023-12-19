@@ -16,6 +16,14 @@ public class Banques {
         return nom;
     }
 
+    public Banques(String nom) {
+        this.nom = nom;
+    }
+
+    public Banques() {
+
+    }
+
     public void setNom(String nom) {
         this.nom = nom;
     }
@@ -30,12 +38,4 @@ public class Banques {
 
     @OneToMany (mappedBy = "banque")
     private Set<Client> client;
-
-    @Override
-    public String toString() {
-        return "Banques{" +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
-                '}';
-    }
 }

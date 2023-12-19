@@ -13,12 +13,14 @@ public class Adresse {
 
     private String ville;
 
-    public int getNumero() {
-        return numero;
+    public Adresse(int numero, String rue, int codePostal, String ville) {
+        this.numero = numero;
+        this.rue = rue;
+        this.codePostal = codePostal;
+        this.ville = ville;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public Adresse() {
     }
 
     public String getRue() {
@@ -29,11 +31,11 @@ public class Adresse {
         this.rue = rue;
     }
 
-    public int getCodePostal() {
+    public Integer getCodePostal() {
         return codePostal;
     }
 
-    public void setCodePostal(int codePostal) {
+    public void setCodePostal(Integer codePostal) {
         this.codePostal = codePostal;
     }
 
@@ -43,15 +45,5 @@ public class Adresse {
 
     public void setVille(String ville) {
         this.ville = ville;
-    }
-
-    @Override
-    public String toString() {
-        return "Adresse{" +
-                ", numero='" + numero + '\'' +
-                ", rue='" + rue + '\'' +
-                ", codePostal='" + codePostal + '\'' +
-                ", ville='" + ville + '\'' +
-                '}';
     }
 }
